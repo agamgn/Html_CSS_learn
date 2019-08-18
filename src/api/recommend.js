@@ -16,7 +16,6 @@ export function getRecommend() {
 
 export function getDiscList() {
   const url = '/api/getDiscList'
-
   const data = Object.assign({}, commonParams, {
     platform: 'yqq',
     hostUin: 0,
@@ -28,7 +27,6 @@ export function getDiscList() {
     rnd: Math.random(),
     format: 'json'
   })
-
   return axios.get(url, {
     params: data
   }).then((res) => {
