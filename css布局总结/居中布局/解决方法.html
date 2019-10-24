@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<style type="text/css">
+    #parent1 {
+        width: 1000px;
+        height: 600px;
+        background-color: #ccc;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    #child1 {
+        width: 200px;
+        height: 200px;
+        background-color: #c9394a;
+        display: table;
+        /*display: block;*/
+        margin: 0 auto;
+    }
+
+    #parent2 {
+        width: 1000px;
+        height: 600px;
+        background-color: #ccc;
+        position: relative;
+    }
+    #child2 {
+        width: 200px;
+        height: 200px;
+        background-color: #c9394a;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+</style>
+<body>
+
+    <h2>table-margin以及table-cell和vertical-algin</h2>
+<strong>优点：对浏览器兼容好</strong><br>
+<strong>缺点：代码的语义化</strong>
+
+<div id="parent1">
+    
+    <div id="child1"></div>
+</div>
+
+
+    <h2>transform和absolute</h2>
+<strong>优点：</strong><br>
+<strong>缺点：</strong>
+
+<div id="parent2">
+    
+    <div id="child2"></div>
+</div>
+</body>
+</html>
