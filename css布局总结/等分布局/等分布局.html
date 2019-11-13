@@ -1,71 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Document</title>
     <style>
-    .col1,
-    .col2,
-    .col3,
-    .col4 {
-        height: 300px;
-        width: 25%;
-        float: left;
-    }
-    .col1 {
-        background-color: hotpink;
-    }
-    .col2 {
-        background-color: green;
-    }
-    .col3 {
-        background-color: lightblue;
-    }
-    .col4 {
-        background-color: yellow;
-    }
+        .col1,
+        .col2,
+        .col3,
+        .col4 {
+            height: 300px;
+            width: 25%;
+            float: left;
+        }
+
+        .col1 {
+            background-color: hotpink;
+        }
+
+        .col2 {
+            background-color: green;
+        }
+
+        .col3 {
+            background-color: lightblue;
+        }
+
+        .col4 {
+            background-color: yellow;
+        }
 
 
 
-    .parent1 {
-        width: 100%;
-        display: table;
-    }
-    .col11,
-    .col22,
-    .col33,
-    .col44 {
-        height: 300px;
-        display: table-cell;
-    }
-    .col11 {
-        background-color: red;
-    }
-    .col22 {
-        background-color: rebeccapurple;
-    }
-    .col33 {
-        background-color: brown;
-    }
-    .col44 {
-        background-color: blue;
-    }
+        .parent1 {
+            width: 100%;
+            display: table;
+        }
 
+        .col11,
+        .col22,
+        .col33,
+        .col44 {
+            height: 300px;
+            display: table-cell;
+        }
+
+        .col11 {
+            background-color: red;
+        }
+
+        .col22 {
+            background-color: rebeccapurple;
+        }
+
+        .col33 {
+            background-color: brown;
+        }
+
+        .col44 {
+            background-color: blue;
+        }
+
+
+
+        .cparent {
+            height: 300px;
+            margin-left: -10px;
+        }
+        .ccol1,
+        .ccol2,
+        .ccol3,
+        .ccol4 {
+            height: 300px;
+            width: 25%;
+            float: left;
+            box-sizing: border-box;
+            padding-left: 10px;
+        }
+        .inner {
+            height: 300px;
+        }
+        .ccol1 .inner {
+            background-color: hotpink;
+        }
+
+        .ccol2 .inner {
+            background-color: green;
+        }
+
+        .ccol3 .inner {
+            background-color: lightblue;
+        }
+
+        .ccol4 .inner {
+            background-color: yellow;
+        }
     </style>
 </head>
+
 <body>
     <!-- float属性实现等分布局 -->
     <div class="parent">
-        <div class="col1"></div>
-        <div class="col2"></div>
-        <div class="col3"></div>
-        <div class="col4"></div>
+            <div class="col1"></div>
+            <div class="col2"></div>
+            <div class="col3"></div>
+            <div class="col4"></div>
     </div>
     <!-- display属性的值有关table实现等分布局 -->
     <div class="parent1">
-            <div class="col11"></div>
-            <div class="col22"></div>
-            <div class="col33"></div>
-            <div class="col44"></div>
+        <div class="col11"></div>
+        <div class="col22"></div>
+        <div class="col33"></div>
+        <div class="col44"></div>
+    </div>
+
+
+    <!-- 带有空白间隔的等分布局 -->
+    <div class="parent-fix">
+        <div class="cparent">
+                <div class="ccol1 "><div class="inner"></div></div>
+                <div class="ccol2 "><div class="inner"></div></div>
+                <div class="ccol3 "><div class="inner"></div></div>
+                <div class="ccol4 "><div class="inner"></div></div>
+            
         </div>
+    </div>
 </body>
+
 </html>
