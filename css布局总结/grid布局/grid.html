@@ -1,63 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-
     <title>Document</title>
-    <style>
-        #parent {
-            display: grid;
-        }
-
-        .col1 {
-            height: 100px;
-            width: 20px;
-            background: #ccc;
-        }
-    </style>
+<style>
+    .box1 {
+        width: 500px;
+        height: 500px;
+        background-color: hotpink;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-auto-flow: column;
+        place-items:center;
+        /* justify-items: center;
+        align-items: center; */
+        justify-content: center;
+    }
+    .item1 {
+        width: 98px;
+        height: 98px;
+        background-color: #ccc;
+        border: 1px solid red;
+    }
+</style>
 </head>
-
 <body>
-        <div class="container">
-                <header>Header</header>
-                <div class="content">
-                    <main>Main</main>
-                    <nav>Nav</nav>
-                    <aside>Aside</aside>
+  
+    <div class="wai">
+            <div class="box1">
+                    <div class="item1">1</div>
+                    <div class="item1">2</div>
+                    <div class="item1">3</div>
+                    <div class="item1">4</div>
+                    <div class="item1">5</div>
+                    <div class="item1">6</div>
+                    <div class="item1">7</div>
+                    <div class="item1">8</div>
+                    <div class="item1">9</div>
                 </div>
-                <footer>Footer</footer>
-            </div>
-            <style>
-            .container{
-                display:flex;
-                /* 垂直*/
-                flex-direction: column;
-                width:100%;
-                /*视口被均分为100单位的vh 占据整个窗口*/
-                min-height:100vh;
-            }
-            header,footer{
-                /*放大缩小比例为0 占据垂直方向80px*/
-                flex:0 0 80px;
-            }
-            .content{
-                display: flex;
-                /*1 1 auto 后两个值省略*/
-                flex:1;
-            }
-            nav{
-                /*默认 0 数值越小 排列越靠前*/
-                order:-1;
-                flex:0 0 80px;
-            }
-            aside{
-                flex:0 0 80px;
-            }
-            main{
-                flex:1;
-            }
-            </style>
+    </div>
+
 </body>
 
 </html>
