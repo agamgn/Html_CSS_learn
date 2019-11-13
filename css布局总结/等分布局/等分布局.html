@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+    .col1,
+    .col2,
+    .col3,
+    .col4 {
+        height: 300px;
+        width: 25%;
+        float: left;
+    }
+    .col1 {
+        background-color: hotpink;
+    }
+    .col2 {
+        background-color: green;
+    }
+    .col3 {
+        background-color: lightblue;
+    }
+    .col4 {
+        background-color: yellow;
+    }
+
+
+
+    .parent1 {
+        width: 100%;
+        display: table;
+    }
+    .col11,
+    .col22,
+    .col33,
+    .col44 {
+        height: 300px;
+        display: table-cell;
+    }
+    .col11 {
+        background-color: red;
+    }
+    .col22 {
+        background-color: rebeccapurple;
+    }
+    .col33 {
+        background-color: brown;
+    }
+    .col44 {
+        background-color: blue;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- float属性实现等分布局 -->
+    <div class="parent">
+        <div class="col1"></div>
+        <div class="col2"></div>
+        <div class="col3"></div>
+        <div class="col4"></div>
+    </div>
+    <!-- display属性的值有关table实现等分布局 -->
+    <div class="parent1">
+            <div class="col11"></div>
+            <div class="col22"></div>
+            <div class="col33"></div>
+            <div class="col44"></div>
+        </div>
+</body>
+</html>
