@@ -1,26 +1,19 @@
 // 基本点：canvas是基于状态来画图的
 var canvas = document.getElementById("canvas");
+canvas.width=1024;
+canvas.height=768;
 
-var content = canvas.getContext("2d");
-content.beginPath();
-content.moveTo(100, 100);
-content.lineTo(700, 700);
-content.lineTo(100, 700);
-content.lineTo(100, 100);
+var ctx = canvas.getContext("2d");
+ctx.lineWidth=5;
+ctx.strokeStyle="#005588";
+ctx.arc(300,300,200,0,2*Math.PI);
+ctx.stroke();
 
-content.lineWidth =5
-content.strokeStyle="red"
-content.closePath();
-// stroke用于绘制线条的
-content.stroke();
-content.beginPath();
-content.moveTo(100, 10);
-content.lineTo(500, 100);
-content.strokeStyle="blue"
-content.stroke();
-content.closePath();
-// content.fillStyle="rgb(2,100,30)";
-// content.fill();
-
-
+for(var i =0;i<10;i++){
+    ctx.beginPath();
+    ctx.arc(50+i*100,600,40,0,2*Math.PI*(i+1)/10);
+    // 封闭
+    // ctx.closePath();
+    ctx.stroke();
+}
 
