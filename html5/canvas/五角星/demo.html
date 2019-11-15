@@ -16,8 +16,16 @@
             canvas.height = 800;
             var ctx = canvas.getContext("2d");
 
-            ctx.lineWidth = 10;
-            drawStar(ctx, 150, 300, 400, 400, 0);
+            ctx.fillStyle = "black";
+            ctx.fillRect(0,0,canvas.width,canvas.height);
+            // for(var i=0;i<200;i++){
+            //     var r=Math.random()*10+10;
+            //     var x=Math.abs(Math.random()*canvas.width-40)+20;
+            //     var y=Math.abs(Math.random()*canvas.height-40)+20;
+            //     drawStar(ctx, x, y, r, r/2, 10);
+            // }
+            var r=Math.random()*100+10;
+            drawStar(ctx, 15, 30, r, r/2.0, 0);
         }
 
 
@@ -32,6 +40,12 @@
             }
 
             ctx.closePath();
+
+            ctx.fillStyle="#fb3";
+            ctx.strokeStyle="#fd5";
+            ctx.lineWidth=3;
+            ctx.lineJoin="round";
+            ctx.fill();
             ctx.stroke();
         }
     </script>
