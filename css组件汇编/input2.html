@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>文本输入框(input text)样式2</title>
+    <style>
+        .row {
+            margin: 0 auto;
+            padding-top: 10px;
+            padding-left: 5em;
+            position: relative;
+            z-index: 1;
+        }
+        .row span {
+            position: relative;
+            display: inline-block;
+            margin: 10px;
+        }
+        .clean-slide {
+            position: relative;
+            display: inline-block;
+            width: 215px;
+            padding: 10px 0 10px 15px;
+            font-family: "Open Sans", sans;
+            font-weight: 400;
+            color: #377D6A;
+            background: #efefef;
+            border: 1px solid #377D6A;
+            border-radius: 3px;
+            outline: 0;
+            text-indent: 60px;
+            transition: all .3s ease-in-out;
+        }
+        .clean-slide::-webkit-input-placeholder {
+            color: #efefef;
+            text-indent: 0;
+            font-weight: 300;
+        }
+        .clean-slide + label {
+            display: inline-block;
+            position: absolute;
+            transform: translateX(0);
+            top: 0;
+            left: 0;
+            bottom: 0;
+            padding: 13px 15px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #032429;
+            text-align: left;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+            transition: all .3s ease-in-out, color .3s ease-out;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            overflow: hidden;
+        }
+        .clean-slide + label:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 100%;
+            bottom: 0;
+            width: 100%;
+            background: #7AB893;
+            z-index: -1;
+            transform: translate(0);
+            transition: all .3s ease-in-out;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        .clean-slide:focus,
+        .clean-slide:active {
+            color: #377D6A;
+            text-indent: 0;
+            background: #fff;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .clean-slide:focus::-webkit-input-placeholder,
+        .clean-slide:active::-webkit-input-placeholder {
+            color: #aaa;
+        }
+        .clean-slide:focus + label,
+        .clean-slide:active + label {
+            color: #fff;
+            text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+            transform: translateX(-100%);
+        }
+        .clean-slide:focus + label:after,
+        .clean-slide:active + label:after {
+            transform: translate(100%);
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+  <span>
+    <input class="clean-slide" id="site1" type="text" placeholder="程序员" /><label for="site1">輸入</label>
+  </span>
+    <span>
+    <input class="clean-slide" id="site2" type="text" placeholder="web程序员" /><label for="site2">程序員</label>
+  </span>
+</div>
+  <p style="color:#4a4a4a;">点击输入区域，查看示例效果！</p>
+</body>
+</html>
