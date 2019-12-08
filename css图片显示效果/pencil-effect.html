@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS铅笔画效果</title>
+    <style>
+        .pencil-effect {
+          background-image: url(./photo/photo.jpg);
+          background-size: cover;
+          background-position: center;
+        }
+        @supports (filter: invert(1)) and (background-blend-mode: difference) {
+          .pencil-effect {
+            background-image: url(./photo/photo.jpg), url(./photo/photo.jpg);
+            background-blend-mode: difference;
+            background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px);
+            filter: brightness(2) invert(1) grayscale(1);
+            box-shadow: inset 0 0 0 1px black;
+          }
+        }
+    </style>
+</head>
+<body>
+<div class="pencil-effect" style="width:680px;height:450px;max-width:100%;"></div>
+</body>
+</html>
