@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS浮雕效果</title>
+    <style>
+        .emboss-effect {
+          background-image: url(./photo/photo.jpg);
+          background-size: cover;
+          background-position: center;
+        }
+
+        @supports (filter: invert(1)) and (background-blend-mode: difference, screen) {
+          .emboss-effect {
+            background-image: url(./photo/photo.jpg), url(./photo/photo.jpg), url(./photo/photo.jpg);
+            background-blend-mode: difference, screen;
+            background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px), center;
+            filter: brightness(2) invert(1) grayscale(1);
+          }
+        }
+    </style>
+</head>
+<body>
+<div class="emboss-effect" style="width:680px;height:450px;max-width:100%;"></div>
+</body>
+</html>
