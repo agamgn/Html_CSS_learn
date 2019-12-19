@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS喷枪效果</title>
+    <style>
+      .airbrush-effect {
+        background-image: url(./photo/photo.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+
+      @supports (filter: blur(5px) contrast(5)) and (mix-blend-mode: multiply) {
+        .airbrush-effect {
+          position: relative;
+          overflow: hidden;
+        }
+        .airbrush-effect:after {
+          display: block;
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: inherit;
+          filter: brightness(1.5) saturate(100) blur(5px) contrast(5);
+          mix-blend-mode: multiply;
+        }
+      }
+    </style>
+</head>
+<body>
+<div class="airbrush-effect" style="width:680px;height:450px;max-width:100%;"></div>
+</body>
+</html>
