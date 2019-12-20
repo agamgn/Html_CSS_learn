@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS垂直低墨效果</title>
+    <style>
+      .low-ink-y-effect {
+        background-image: url(./photo/photo.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+
+      @supports (background-blend-mode: screen, overlay) {
+        .low-ink-y-effect {
+          background-image: url(./photo/photo.jpg), url(./photo/photo.jpg), url(./photo/photo.jpg);
+          background-size: 100% 100%, 100% 1000%;
+          background-blend-mode: screen, overlay;
+        }
+      }
+    </style>
+</head>
+<body>
+<div class="low-ink-y-effect" style="width:680px;height:450px;max-width:100%;"></div>
+</body>
+</html>
