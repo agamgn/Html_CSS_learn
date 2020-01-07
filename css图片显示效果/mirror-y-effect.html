@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS垂直镜像效果</title>
+    <style>
+     .mirror-y-effect {
+        background-image: url(./photo/photo.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+
+      @supports (transform: scaleY(-1)) {
+        .mirror-y-effect {
+          position: relative;
+        }
+        .mirror-y-effect:before, .mirror-y-effect:after {
+          display: block;
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          background: inherit;
+        }
+        .mirror-y-effect:before {
+          top: 0;
+          bottom: 50%;
+          transform: scaleY(-1);
+        }
+        .mirror-y-effect:after {
+          top: 50%;
+          bottom: 0;
+        }
+      }
+    </style>
+</head>
+<body>
+<div class="mirror-y-effect" style="width:680px;height:680px;max-width:100%;"></div>
+</body>
+</html>
