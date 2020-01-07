@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS水平镜像效果</title>
+    <style>
+     .mirror-x-effect {
+        background-image: url(./photo/photo.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+
+      @supports (transform: scaleX(-1)) {
+        .mirror-x-effect {
+          position: relative;
+        }
+        .mirror-x-effect:before, .mirror-x-effect:after {
+          display: block;
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          background: inherit;
+        }
+        .mirror-x-effect:before {
+          left: 0;
+          right: 50%;
+          transform: scaleX(-1);
+        }
+        .mirror-x-effect:after {
+          left: 50%;
+          right: 0;
+        }
+      }
+    </style>
+</head>
+<body>
+<div class="mirror-x-effect" style="width:680px;height:450px;max-width:100%;"></div>
+</body>
+</html>
