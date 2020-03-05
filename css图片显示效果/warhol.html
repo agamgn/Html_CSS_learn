@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>三十课-CSS沃霍尔效果示例程序</title>
+    <style>
+     .warhol-effect {
+        background-image: url(./photo/photo.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+
+      @supports (background-blend-mode: color) {
+        .warhol-effect {
+          background-image: linear-gradient(#14EBFF 0, #14EBFF 50%, #FFFF70 50%, #FFFF70 100%), linear-gradient(#FF85DA 0, #FF85DA 50%, #AAA 50%, #AAA 100%), url(./photo/photo.jpg);
+          background-size: 50% 100%, 50% 100%, 50% 50%;
+          background-position: top left, top right;
+          background-repeat: no-repeat, no-repeat, repeat;
+          background-blend-mode: color;
+        }
+      }
+    </style>
+</head>
+<body>
+<div class="warhol-effect" style="width:680px;height:450px;"></div>
+</body>
+</html>
