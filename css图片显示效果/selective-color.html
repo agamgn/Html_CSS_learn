@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS颜色校正效果</title>
+    <style>
+     .selective-color-effect {
+        background-image: url(./photo/photo.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+
+      @supports (filter: brightness(3)) and (mix-blend-mode: color) {
+        .selective-color-effect {
+          position: relative;
+        }
+        .selective-color-effect:before, .selective-color-effect:after {
+          display: block;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: inherit;
+          background-color: red;
+          background-blend-mode: screen;
+          mix-blend-mode: color;
+          filter: brightness(3);
+        }
+      }
+    </style>
+</head>
+<body>
+<div class="selective-color-effect" style="width:680px;height:450px;max-width:100%;"></div>
+</body>
+</html>
